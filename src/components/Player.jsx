@@ -1,4 +1,5 @@
-import { useState, useRef, useEffect } from "react"
+import { useRef, useEffect } from "react"
+import { Slider } from "./Slider.tsx"
 import { usePlayerStore } from "../store/playerStore"
 
 export const Pause = ({ className }) => (
@@ -9,7 +10,7 @@ export const Play = ({ className }) => (
     <svg className={className} role="img" height="16" width="16" aria-hidden="true" viewBox="0 0 16 16"><path d="M3 1.713a.7.7 0 0 1 1.05-.607l10.89 6.288a.7.7 0 0 1 0 1.212L4.05 14.894A.7.7 0 0 1 3 14.288V1.713z"></path></svg>
   )
 
-const CurrentSong = ({ image, title }) => {
+const CurrentSong = ({ image, title, artists }) => {
     return (
         <div
             className={`flex items-center gap-5 relative 
@@ -19,9 +20,17 @@ const CurrentSong = ({ image, title }) => {
                 <img src={image} alt={title} />
             </picture>
 
-            <h3 className="font-bold block">
+            <div className="flex flex-col">
+
+            <h3 className="font-semibold text-sm block">
                 {title}
             </h3>
+
+            <span className="text-xs opacity-80">
+                {artists?.join(', ')}
+            </span>
+
+            </div>
         </div>
     )
 }
@@ -63,7 +72,16 @@ export function Player () {
             </div>
 
             <div className="grid place-content-center">
-                Volumen
+                <Slider 
+                    defaultValue={[100]}
+                    max={100}
+                    min={0}
+                    className="w-[95px]"
+                    onValueChange={(value)=>{
+                        const [newVolume] = value
+                        audioRef.current.volume = value
+                    }}
+                />
             </div>
 
             <audio ref={audioRef} />
