@@ -8,8 +8,9 @@ export function CardPlayButton({ id }) {
         if(isPlayingPlaylist){
             setIsPlaying(false)
             return
-        }
+        }        
 
+        // promises
         fetch(`/api/get-info-playlist.json?id=${id}`)
         .then(res => res.json())
         .then(data => {
@@ -17,6 +18,12 @@ export function CardPlayButton({ id }) {
             setIsPlaying(true)
             setCurrentMusic({ songs , playlist, song: songs[0] })
         })
+
+        // async/await
+        // const res = await fetch(`/api/get-info-playlist.json?id=${id}`)
+        // const data = await res.json()
+        // const{ songs, playlist, data } = data
+
     }
 
     return (
