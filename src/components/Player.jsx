@@ -38,6 +38,7 @@ const CurrentSong = ({ image, title, artists }) => {
 export function Player () {
     const { currentMusic, isPlaying, setIsPlaying } = usePlayerStore(state => state)
     const audioRef = useRef()
+    const volumeRef = useRef(1)
 
     useEffect(() => {
         isPlaying ? audioRef.current.play() : audioRef.current.pause()
@@ -79,7 +80,7 @@ export function Player () {
                     className="w-[95px]"
                     onValueChange={(value)=>{
                         const [newVolume] = value
-                        audioRef.current.volume = value
+                        audioRef.current.volume = newVolume / 100
                     }}
                 />
             </div>
