@@ -8,7 +8,7 @@ This repository contains a clone of the popular music service Spotify built usin
 #### This project was created with:
 - [Astro](https://astro.build/)
 - [React](https://react.dev/)
-- [Typescrip](https://www.typescriptlang.org/)
+- [Typescript](https://www.typescriptlang.org/)
 - [TailwindCSS](https://tailwindcss.com/)
 - [Zustand](https://www.npmjs.com/package/zustand)
 - [Shadcn](https://ui.shadcn.com/)
