@@ -1,40 +1,82 @@
-# Astro Starter Kit: Basics
+# Spotify Clone with Astro
 
-```sh
-npm create astro@latest -- --template basics
+## Description
+This repository contains a clone of the popular music service Spotify built using Astro, a modern front-end site generator that offers incredibly fast performance. It is an educational tool designed for those interested in learning how modern web applications are built using Astro.
+
+## 🛠️ Stack
+
+#### This project was created with:
+- [Astro](https://astro.build/)
+- [React](https://react.dev/)
+- [Typescrip](https://www.typescriptlang.org/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [Zustand](https://www.npmjs.com/package/zustand)
+- [Shadcn](https://ui.shadcn.com/)
+- [clsx](https://www.npmjs.com/package/clsx)
+
+### 🚀 Setup
+1. Clone this repository:
+   https://github.com/juedsay/spotify-astro-clone.git
+   
+2. Navigate to the project folder:
+   `cd spotify-astro-clone`
+
+3. Install the dependencies:
+   `npm install`
+
+4. Run the project:
+   `npx astro dev`
+
+Visit `http://localhost:4321` in your browser to see the application in action.
+
+## 🗂️ Project Structure
+
+Inside of this project, you'll see the following folders and files:
+
 ```
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+└── 📁spotify-astro-clone
+    └── 📁.astro
+    └── astro.config.mjs
+    └── package-lock.json
+    └── package.json
+    └── 📁public
+        └── favicon.svg
+        └── 📁fonts
+        └── 📁music
+    └── 📁src
+        └── 📁components
+            └── AsideMenu.astro
+            └── Card.astro
+            └── CardPlayButton.jsx
+            └── MusicsTable.astro
+            └── Player.jsx
+            └── PlaylistItemCard.astro
+            └── SideMenuCard.astro
+            └── SideMenuItem.astro
+            └── Slider.tsx
+        └── 📁icons
+            └── Home.astro
+            └── Library.astro
+            └── Pause.astro
+            └── Play.astro
+            └── Search.astro
+            └── Time.astro
+        └── 📁layouts
+            └── Layout.astro
+        └── 📁lib
+            └── colors.ts
+            └── data.ts
+        └── 📁pages
+            └── 📁api
+                └── get-info-playlist.json.js
+            └── index.astro
+            └── 📁playlist
+                └── [id].astro
+        └── 📁store
+            └── playerStore.js
+    └── tailwind.config.mjs
+    └── tsconfig.json
 ```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
 
 ## 🧞 Commands
 
@@ -49,6 +91,12 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
+## 🫱🏼‍🫲🏼Contributions
+Contributions are always welcome. If you encounter any issues or have any suggestions, feel free to open an issue or submit a pull request.
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## 🔑 Licencia
+This project is licensed under the MIT [LICENSE](LICENSE) - Created by [Julian Simón](https://www.linkedin.com/in/juedsay/).
+
+## ✅ To-Do...
+- [ ] Fix bugs
+- [ ] There are still many things left to do...
