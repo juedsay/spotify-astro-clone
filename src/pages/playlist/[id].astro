@@ -1,4 +1,5 @@
 ---
+import MusicsTable from '../../components/MusicsTable.astro';
 import PlaylistItemCard from '../../components/PlaylistItemCard.astro';
 
 import Layout from '../../layouts/Layout.astro';
@@ -54,8 +55,10 @@ const playlistSongs = songs.filter(song => song.albumId === playlist?.albumId)
         
     </div> 
     <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zin-900/80 -z-10">
-    </div>       
+    </div>
+
+    <section class="p-6">
+      <MusicsTable songs={playlistSongs}/>
+    </section>
 </div>
 </Layout>
-
-<style></style>
