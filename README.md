@@ -1,6 +1,6 @@
 # Spotify Clone with Astro
 
-## Description
+## 📝Description
 This repository contains a clone of the popular music service Spotify built using Astro, a modern front-end site generator that offers incredibly fast performance. It is an educational tool designed for those interested in learning how modern web applications are built using Astro.
 
 ## 🛠️ Stack
